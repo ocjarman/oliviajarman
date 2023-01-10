@@ -2,6 +2,7 @@
   "name": "ojarman_personalsite",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ocjarman.github.io/trivia_frontend",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
