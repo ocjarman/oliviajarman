@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/oliviajarman/static/css/main.fc41e2a5.css",
+    "main.js": "/oliviajarman/static/js/main.b6b1b856.js",
+    "static/js/787.0eea9db6.chunk.js": "/oliviajarman/static/js/787.0eea9db6.chunk.js",
+    "static/media/backgroundimage.png": "/oliviajarman/static/media/backgroundimage.1ab671f2651711adea54.png",
+    "static/media/RRR.png": "/oliviajarman/static/media/RRR.6c5b8d5f1e626ecd8049.png",
+    "static/media/initialsNavy.png": "/oliviajarman/static/media/initialsNavy.e86c4f2341ae7f4a40d2.png",
+    "static/media/SITB.png": "/oliviajarman/static/media/SITB.586b082429b65ba2b1d9.png",
+    "index.html": "/oliviajarman/index.html",
+    "main.fc41e2a5.css.map": "/oliviajarman/static/css/main.fc41e2a5.css.map",
+    "main.b6b1b856.js.map": "/oliviajarman/static/js/main.b6b1b856.js.map",
+    "787.0eea9db6.chunk.js.map": "/oliviajarman/static/js/787.0eea9db6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc41e2a5.css",
+    "static/js/main.b6b1b856.js"
+  ]
+}
