@@ -4,9 +4,9 @@ import * as React from "react";
 import initials from "../static/images/initialsNavy.png";
 import styles from "./Home.styles";
 import Projects from "./Projects";
-import BottomNav from "./BottomNav";
 import { useSelector } from "react-redux";
 import ContactForm from "./ContactForm";
+import MiniDrawer from "./MiniDrawer";
 
 const theme = createTheme({
   palette: {
@@ -30,7 +30,9 @@ const Home = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <MiniDrawer theme={theme} />
       <Container sx={styles.sx.HomeContainer} maxWidth={false}>
+        <Container>{showForm && <ContactForm theme={theme} />}</Container>
         <Projects theme={theme} />
         <Container sx={styles.sx.LogoContainer}>
           <img
@@ -41,11 +43,7 @@ const Home = () => {
             styles={styles.sx.Logo}
           />
         </Container>
-        <Container>{showForm && <ContactForm />}</Container>
-
-        {/* <Button variant="contained">hello</Button> */}
       </Container>
-      <BottomNav theme={theme} />
     </ThemeProvider>
   );
 };

@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 
-const ContactForm = () => {
+const ContactForm = ({ theme }) => {
   //   const dispatch = useDispatch();
   //   const navigate = useNavigate();
 
@@ -41,9 +41,14 @@ const ContactForm = () => {
 
   return (
     <Container
-      sx={{ display: "flex", flexDirection: "column", placeSelf: "flex-start" }}
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        marginTop: "10%",
+        position: "fixed",
+      }}
     >
-      <Typography sx={{ placeSelf: "flex-start" }} variant={"h3"}>
+      <Typography sx={{}} variant={"h3"}>
         Contact
       </Typography>
 
@@ -53,6 +58,8 @@ const ContactForm = () => {
           display: "flex",
           flexDirection: "column",
           placeSelf: "flex-start",
+          backgroundColor: `${theme.palette.primary.light}`,
+          color: "white",
         }}
       >
         <FormControl required>

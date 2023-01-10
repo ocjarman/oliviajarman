@@ -3,8 +3,6 @@ import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import ContactForm from "./components/ContactForm";
-import store from "./store";
-import { Provider } from "react";
 
 function App() {
   //

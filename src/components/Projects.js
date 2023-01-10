@@ -13,30 +13,31 @@ const Projects = ({ theme }) => {
         style={{
           display: "flex",
           justifyContent: "flex-end",
-          marginRight: "30vh",
+          marginRight: "2%",
           marginTop: "10vh",
           gap: "2vw",
           color: `${theme.palette.primary.light}`,
         }}
-      ></Container>
-      <Container
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          width: "85%",
-          gap: "2vw",
-        }}
       >
-        <Link href="https://rightroundrecords.us">
-          <img src={RRR} alt={"logo"} width="auto" className="App-logo" />
-        </Link>
-        <Link href="https://ocjarman.github.io/trivia_frontend/">
-          {" "}
-          <img src={SITB} alt={"logo"} className="sitb-color" />
-        </Link>
-        <Link href="https://github.com/ocjarman">
-          <GitHubIcon style={styles.sx.GitHubIcon} />
-        </Link>
+        <Container
+          style={{
+            display: "flex",
+            justifyContent: "flex-end",
+            width: "85%",
+            gap: "2vw",
+          }}
+        >
+          <Link href="https://rightroundrecords.us">
+            <img src={RRR} alt={"logo"} width="auto" className="App-logo" />
+          </Link>
+          <Link href="https://ocjarman.github.io/trivia_frontend/">
+            {" "}
+            <img src={SITB} alt={"logo"} className="sitb-color" />
+          </Link>
+          <Link href="https://github.com/ocjarman">
+            <GitHubIcon style={styles.sx.GitHubIcon} />
+          </Link>
+        </Container>
       </Container>
     </>
   );
