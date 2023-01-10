@@ -1,10 +1,12 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { Button, Container } from "@mui/material";
+import { Container } from "@mui/material";
 import * as React from "react";
-import Box from "@mui/material/Box";
 import initials from "../static/images/initialsNavy.png";
 import styles from "./Home.styles";
 import Projects from "./Projects";
+import BottomNav from "./BottomNav";
+import { useSelector } from "react-redux";
+import ContactForm from "./ContactForm";
 
 const theme = createTheme({
   palette: {
@@ -24,6 +26,8 @@ const theme = createTheme({
 });
 
 const Home = () => {
+  const showForm = useSelector((state) => state.contact.showForm);
+
   return (
     <ThemeProvider theme={theme}>
       <Container sx={styles.sx.HomeContainer} maxWidth={false}>
@@ -37,8 +41,11 @@ const Home = () => {
             styles={styles.sx.Logo}
           />
         </Container>
+        <Container>{showForm && <ContactForm />}</Container>
+
         {/* <Button variant="contained">hello</Button> */}
       </Container>
+      <BottomNav theme={theme} />
     </ThemeProvider>
   );
 };

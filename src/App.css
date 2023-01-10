@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 9vh;
   pointer-events: none;
 }
 
@@ -11,8 +11,22 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-  .recordSpin {
-    animation: App-logo-spin infinite 20s linear;
+  .sitb-color {
+    animation: sitb-color infinite 20s linear;
+  }
+}
+
+@keyframes sitb-color {
+  from {
+    background-color: #ff7961;
+    border-radius: 100px;
+    width: 9vh;
+    height: "auto";
+  }
+  to {
+    background-color: #f44336;
+    border-radius: 100px;
+    width: 9vh;
   }
 }
 

@@ -1,5 +1,4 @@
 import backgroundImage from "../static/images/backgroundimage.png";
-
 const styles = {
   sx: {
     HomeContainer: {
@@ -10,7 +9,6 @@ const styles = {
       height: "100vh",
       overflowY: "hidden",
       maxWidth: "false",
-      border: "3px solid blue",
     },
     LogoContainer: {
       display: "flex",
@@ -21,6 +19,18 @@ const styles = {
       placeSelf: "center",
       alignSelf: "center",
     },
+    GitHubIcon: {
+      height: "9vh",
+      width: "auto",
+      color: "#10134B",
+    },
+    ContactContainer: {
+      display: "flex",
+      justifyContent: "flex-start",
+      width: "85%",
+      gap: "2vw",
+    },
+    Contact: {},
   },
 };
 

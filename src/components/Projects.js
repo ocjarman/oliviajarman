@@ -1,8 +1,11 @@
 import React from "react";
-import { Button, Container } from "@mui/material";
+import { Button, Container, Link } from "@mui/material";
 import RRR from "../static/images/RRR.png";
 import SITB from "../static/images/SITB.png";
-import recordSpin from "/Users/oliviafsa/ojarman_personalsite/src/App.css";
+import "/Users/oliviafsa/ojarman_personalsite/src/App.css";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import styles from "./Home.styles";
+
 const Projects = ({ theme }) => {
   return (
     <>
@@ -15,34 +18,25 @@ const Projects = ({ theme }) => {
           gap: "2vw",
           color: `${theme.palette.primary.light}`,
         }}
-      >
-        {/* <h3>Projects</h3> */}
-      </Container>
+      ></Container>
       <Container
         style={{
           display: "flex",
           justifyContent: "flex-end",
-          marginRight: "20vh",
+          width: "85%",
           gap: "2vw",
         }}
       >
-        <Button>
-          <img
-            src={RRR}
-            alt={"logo"}
-            width="100vh"
-            height="auto"
-            className={recordSpin}
-            style={{
-              animation: `spin 5s linear infinite`,
-              transform: `rotate(${Math.floor(Math.random() * 361)}deg)`,
-            }}
-          />
-        </Button>
-        <Button>
+        <Link href="https://rightroundrecords.us">
+          <img src={RRR} alt={"logo"} width="auto" className="App-logo" />
+        </Link>
+        <Link href="https://ocjarman.github.io/trivia_frontend/">
           {" "}
-          <img src={SITB} alt={"logo"} width="130vh" height="auto" />
-        </Button>
+          <img src={SITB} alt={"logo"} className="sitb-color" />
+        </Link>
+        <Link href="https://github.com/ocjarman">
+          <GitHubIcon style={styles.sx.GitHubIcon} />
+        </Link>
       </Container>
     </>
   );
