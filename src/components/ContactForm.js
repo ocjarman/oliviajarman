@@ -41,27 +41,50 @@ const ContactForm = ({ theme }) => {
 
   return (
     <Container
+      // sx={{
+      //   display: "flex",
+      //   flexDirection: "column",
+      //   alignContent: "center",
+      //   justifyContent: "center",
+      //   alignItems: "center",
+      //   marginTop: "5%",
+      // }}
       sx={{
         display: "flex",
         flexDirection: "column",
-        marginTop: "10%",
-        position: "fixed",
+        alignContent: "center",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        position: "absolute",
+        left: -175,
+        bottom: 0,
+        top: "8vh",
+        width: "40%",
+        height: "100%",
       }}
     >
-      <Typography sx={{}} variant={"h3"}>
-        Contact
-      </Typography>
-
       <form
         id="contact_form"
         style={{
           display: "flex",
           flexDirection: "column",
-          placeSelf: "flex-start",
           backgroundColor: `${theme.palette.primary.light}`,
           color: "white",
+          width: "50%",
+          padding: "2%",
+          gap: 10,
         }}
       >
+        <Typography
+          sx={{
+            color: `${theme.palette.secondary.dark}`,
+            padding: "2%",
+            placeSelf: "center",
+          }}
+          variant={"h3"}
+        >
+          Contact Me
+        </Typography>
         <FormControl required>
           <InputLabel htmlFor="name-input">Your Name</InputLabel>
           <Input
@@ -119,7 +142,12 @@ const ContactForm = ({ theme }) => {
         </FormControl>
         <Button
           size="large"
-          sx={{ width: "10vw", height: "5vh" }}
+          sx={{
+            width: "auto",
+            height: "5vh",
+            placeSelf: "center",
+            marginTop: "2%",
+          }}
           onClick={handleSubmit}
           variant="contained"
           type="submit"

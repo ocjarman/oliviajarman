@@ -7,12 +7,13 @@ import Projects from "./Projects";
 import { useSelector } from "react-redux";
 import ContactForm from "./ContactForm";
 import MiniDrawer from "./MiniDrawer";
+import About from "./About";
 
 const theme = createTheme({
   palette: {
     primary: {
-      light: "#757ce8",
-      main: "#365f7s",
+      light: "#F5E5E5",
+      main: "#10134B",
       dark: "#10134B",
       contrastText: "#fff",
     },
@@ -27,12 +28,12 @@ const theme = createTheme({
 
 const Home = () => {
   const showForm = useSelector((state) => state.contact.showForm);
+  const showAbout = useSelector((state) => state.contact.showAbout);
 
   return (
     <ThemeProvider theme={theme}>
       <MiniDrawer theme={theme} />
       <Container sx={styles.sx.HomeContainer} maxWidth={false}>
-        <Container>{showForm && <ContactForm theme={theme} />}</Container>
         <Projects theme={theme} />
         <Container sx={styles.sx.LogoContainer}>
           <img
@@ -42,6 +43,8 @@ const Home = () => {
             height="300vh"
             styles={styles.sx.Logo}
           />
+          {showForm && <ContactForm theme={theme} />}
+          {showAbout && <About theme={theme} />}
         </Container>
       </Container>
     </ThemeProvider>

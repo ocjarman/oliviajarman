@@ -15,16 +15,12 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
-import { useDispatch } from "react-redux";
-import { setShowForm } from "../store/contactSlice";
-import { Link } from "@mui/material";
-
+import { useDispatch, useSelector } from "react-redux";
+import { setShowForm, setShowAbout } from "../store/contactSlice";
+import PersonIcon from "@mui/icons-material/Person";
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -96,6 +92,8 @@ export default function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
+  const showAbout = useSelector((state) => state.contact.showAbout);
+  const showForm = useSelector((state) => state.contact.showForm);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -109,6 +107,9 @@ export default function MiniDrawer() {
 
   const toggleForm = () => {
     dispatch(setShowForm());
+  };
+  const toggleAbout = () => {
+    dispatch(setShowAbout());
   };
   return (
     <Box sx={{ display: "flex" }}>
@@ -128,9 +129,10 @@ export default function MiniDrawer() {
               marginRight: 5,
               ...(open && { display: "none" }),
               backgroundColor: `${theme.palette.primary.dark}`,
+              marginLeft: ".1%",
             }}
           >
-            <MenuIcon style={{}} />
+            <MenuIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -146,61 +148,71 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Contact Me", "LinkedIn"].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
+          <ListItem
+            sx={{ display: "flex", padding: "10%" }}
+            onClick={toggleAbout}
+          >
+            <ListItemButton onClick={toggleAbout}>
+              <ListItemIcon
+                onClick={toggleAbout}
                 sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
+                  minWidth: 0,
+                  justifyContent: "center",
+                  gap: 2,
+                  color: "#10134B",
                 }}
               >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  {index % 2 === 0 ? (
-                    <EmailIcon onClick={toggleForm} />
-                  ) : (
-                    <Link href="https://www.linkedin.com/in/oliviajarman/">
-                      <LinkedInIcon />
-                    </Link>
-                  )}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-
-          {["Instagram"].map((text, index) => (
-            <ListItem key={text} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
+                <PersonIcon /> About
+              </ListItemIcon>
+            </ListItemButton>
+          </ListItem>
+          <ListItem
+            sx={{ display: "flex", padding: "10%" }}
+            onClick={toggleForm}
+          >
+            <ListItemButton onClick={toggleForm}>
+              <ListItemIcon
+                onClick={toggleForm}
                 sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
+                  minWidth: 0,
+                  justifyContent: "center",
+                  gap: 2,
+                  color: "#10134B",
                 }}
               >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  {index % 2 === 0 && (
-                    <Link href="https://www.instagram.com/livcath/?hl=en">
-                      <InstagramIcon />
-                    </Link>
-                  )}
-                </ListItemIcon>
-                <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-              </ListItemButton>
-            </ListItem>
-          ))}
+                <EmailIcon /> Contact Me
+              </ListItemIcon>
+            </ListItemButton>
+          </ListItem>
+          <ListItem sx={{ display: "flex", padding: "10%" }}>
+            <ListItemButton href="https://www.linkedin.com/in/oliviajarman/">
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  justifyContent: "center",
+                  gap: 2,
+                  color: "#10134B",
+                }}
+              >
+                <LinkedInIcon />
+                LinkedIn
+              </ListItemIcon>
+            </ListItemButton>
+          </ListItem>
+          <ListItem sx={{ display: "flex", padding: "10%" }}>
+            <ListItemButton href="https://www.instagram.com/livcath/?hl=en">
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  justifyContent: "center",
+                  gap: 2,
+                  color: "#10134B",
+                }}
+              >
+                <InstagramIcon /> Instagram
+              </ListItemIcon>
+            </ListItemButton>
+          </ListItem>
         </List>
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>

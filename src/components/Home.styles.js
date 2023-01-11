@@ -12,8 +12,12 @@ const styles = {
     },
     LogoContainer: {
       display: "flex",
+      flexDirection: "column",
+      alignContent: "center",
       justifyContent: "center",
-      marginTop: "20vh",
+      justifyItems: "center",
+      alignItems: "center",
+      marginTop: "3vh",
     },
     Logo: {
       placeSelf: "center",
