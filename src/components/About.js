@@ -14,7 +14,6 @@ const About = ({ theme }) => {
         justifyContent: "flex-start",
         alignItems: "center",
         position: "absolute",
-        left: 30,
         bottom: 0,
         top: "8vh",
         width: "40%",

@@ -56,7 +56,6 @@ const ContactForm = ({ theme }) => {
         justifyContent: "flex-start",
         alignItems: "center",
         position: "absolute",
-        left: -175,
         bottom: 0,
         top: "8vh",
         width: "40%",
