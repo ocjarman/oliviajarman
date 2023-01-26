@@ -6,7 +6,6 @@ import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
-import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -25,11 +24,13 @@ const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
+
   transition: theme.transitions.create("width", {
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.enteringScreen,
   }),
   overflowX: "hidden",
+  backgroundColor: `${theme.palette.primary.light}`,
 });
 
 const closedMixin = (theme) => ({
@@ -37,11 +38,13 @@ const closedMixin = (theme) => ({
     easing: theme.transitions.easing.sharp,
     duration: theme.transitions.duration.leavingScreen,
   }),
+
   overflowX: "hidden",
   width: `calc(${theme.spacing(7)} + 1px)`,
   [theme.breakpoints.up("sm")]: {
     width: `calc(${theme.spacing(8)} + 1px)`,
   },
+  backgroundColor: `${theme.palette.primary.light}`,
 });
 
 const DrawerHeader = styled("div")(({ theme }) => ({
@@ -49,6 +52,8 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "flex-end",
   padding: theme.spacing(0, 1),
+  backgroundColor: `${theme.palette.primary.light}`,
+
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
@@ -78,6 +83,7 @@ const Drawer = styled(MuiDrawer, {
   flexShrink: 0,
   whiteSpace: "nowrap",
   boxSizing: "border-box",
+  backgroundColor: `${theme.palette.primary.light}`,
   ...(open && {
     ...openedMixin(theme),
     "& .MuiDrawer-paper": openedMixin(theme),
@@ -92,8 +98,6 @@ export default function MiniDrawer() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
-  const showAbout = useSelector((state) => state.contact.showAbout);
-  const showForm = useSelector((state) => state.contact.showForm);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -103,7 +107,6 @@ export default function MiniDrawer() {
   };
 
   const dispatch = useDispatch();
-  //   const showForm = useSelector((state) => state.contact.showForm);
 
   const toggleForm = () => {
     dispatch(setShowForm());
@@ -114,7 +117,11 @@ export default function MiniDrawer() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar position="fixed" open={open}>
+      <AppBar
+        position="fixed"
+        open={open}
+        sx={{ backgroundColor: `${theme.palette.primary.dark}` }}
+      >
         <Toolbar
           sx={{
             backgroundColor: `${theme.palette.primary.dark}`,
@@ -129,14 +136,17 @@ export default function MiniDrawer() {
               marginRight: 5,
               ...(open && { display: "none" }),
               backgroundColor: `${theme.palette.primary.dark}`,
-              marginLeft: ".1%",
             }}
           >
             <MenuIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open}>
+      <Drawer
+        variant="permanent"
+        open={open}
+        sx={{ backgroundColor: `${theme.palette.primary.dark}` }}
+      >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? (
@@ -147,9 +157,13 @@ export default function MiniDrawer() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <List>
+        <List sx={{ backgroundColor: `${theme.palette.primary.light}` }}>
           <ListItem
-            sx={{ display: "flex", padding: "10%" }}
+            sx={{
+              display: "flex",
+              padding: "10%",
+              backgroundColor: `${theme.palette.primary.light}`,
+            }}
             onClick={toggleAbout}
           >
             <ListItemButton onClick={toggleAbout}>
@@ -158,7 +172,7 @@ export default function MiniDrawer() {
                 sx={{
                   minWidth: 0,
                   justifyContent: "center",
-                  gap: 2,
+                  gap: 3,
                   color: "#10134B",
                 }}
               >
@@ -176,7 +190,7 @@ export default function MiniDrawer() {
                 sx={{
                   minWidth: 0,
                   justifyContent: "center",
-                  gap: 2,
+                  gap: 3,
                   color: "#10134B",
                 }}
               >
@@ -190,7 +204,7 @@ export default function MiniDrawer() {
                 sx={{
                   minWidth: 0,
                   justifyContent: "center",
-                  gap: 2,
+                  gap: 3,
                   color: "#10134B",
                 }}
               >
@@ -205,7 +219,7 @@ export default function MiniDrawer() {
                 sx={{
                   minWidth: 0,
                   justifyContent: "center",
-                  gap: 2,
+                  gap: 3,
                   color: "#10134B",
                 }}
               >

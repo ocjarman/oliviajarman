@@ -34,9 +34,6 @@ const Projects = ({ theme }) => {
             {" "}
             <img src={SITB} alt={"logo"} className="sitb-color" />
           </Link>
-          <Link href="https://github.com/ocjarman">
-            <GitHubIcon style={styles.sx.GitHubIcon} />
-          </Link>
         </Container>
       </Container>
     </>

@@ -1,25 +1,12 @@
 import React, { useState } from "react";
 import { send } from "emailjs-com";
-
+import styles from "./Home.styles";
 // import axios from "axios";
 import { Container, Typography } from "@mui/material";
 
 const About = ({ theme }) => {
   return (
-    <Container
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignContent: "center",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        position: "absolute",
-        bottom: 0,
-        top: "8vh",
-        width: "40%",
-        height: "100%",
-      }}
-    >
+    <Container sx={styles.sx.AboutContainer}>
       <Typography
         sx={{
           padding: "2%",

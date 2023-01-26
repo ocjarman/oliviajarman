@@ -2,7 +2,7 @@ import backgroundImage from "../static/images/backgroundimage.png";
 const styles = {
   sx: {
     HomeContainer: {
-      backgroundImage: `url(${backgroundImage})`,
+      // backgroundImage: `url(${backgroundImage})`,
       backgroundSize: "cover",
       width: "100vw",
       backgroundPosition: "center",
@@ -24,7 +24,7 @@ const styles = {
       alignSelf: "center",
     },
     GitHubIcon: {
-      height: "9vh",
+      height: "5vh",
       width: "auto",
       color: "#10134B",
     },
@@ -34,7 +34,18 @@ const styles = {
       width: "85%",
       gap: "2vw",
     },
-    Contact: {},
+    AboutContainer: {
+      display: "flex",
+      flexDirection: "column",
+      alignContent: "center",
+      justifyContent: "flex-start",
+      alignItems: "center",
+      position: "absolute",
+      bottom: 0,
+      top: "8vh",
+      width: "40%",
+      height: "100%",
+    },
   },
 };
 
