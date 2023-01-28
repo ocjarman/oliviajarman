@@ -4,11 +4,8 @@ import * as React from "react";
 import initials from "../static/images/initialsNavy.png";
 import styles from "./Home.styles";
 import Projects from "./Projects";
-import { useSelector } from "react-redux";
 import ContactForm from "./ContactForm";
-import About from "./About";
 import { useDispatch } from "react-redux";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import { Link, Button } from "@mui/material";
 import instagramIcon from "../static/images/instagramIcon.png";
 import linkedIn from "../static/images/linkedIn.png";
@@ -33,8 +30,6 @@ const theme = createTheme({
 });
 
 const Home = () => {
-  const dispatch = useDispatch();
-
   return (
     <ThemeProvider theme={theme}>
       <Container sx={styles.sx.HomeContainer} maxWidth={false}>
@@ -48,27 +43,26 @@ const Home = () => {
             height="300vh"
             styles={styles.sx.Logo}
           />
-          <Typography variant="h2" component="h2">
+          <Typography variant="h3" component="h3">
             OLIVIA JARMAN
           </Typography>
 
           <Typography
-            variant="h3"
-            component="h3"
+            variant="h5"
+            component="h5"
             sx={{
               display: "flex",
-              margin: "5%",
+              marginTop: "5%",
               justifyContent: "center",
             }}
           >
             SOFTWARE ENGINEER | FULLSTACK DEVELOPER
           </Typography>
 
-          <AboutMe />
           <Container
             sx={{
               display: "flex",
-              margin: "10%",
+              marginTop: "5%",
               justifyContent: "center",
             }}
           >
@@ -80,9 +74,7 @@ const Home = () => {
                 height="70vh"
               />
             </Button>
-            <Link href="https://github.com/ocjarman">
-              <GitHubIcon style={styles.sx.GitHubIcon} />
-            </Link>
+
             <Link href="https://www.instagram.com/livcath/?hl=en">
               <img
                 src={instagramIcon}
@@ -92,7 +84,8 @@ const Home = () => {
               />
             </Link>
           </Container>
-          <TechnicalProficiencies />
+          <AboutMe />
+          {/* <TechnicalProficiencies /> */}
         </Container>
         <ContactForm theme={theme} />
       </Container>

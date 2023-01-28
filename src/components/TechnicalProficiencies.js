@@ -21,30 +21,36 @@ const TechnicalProficiencies = () => {
       }}
     >
       <Typography variant="h4" component="h4">
-        My Technical Proficiencies
+        TECH STACK
       </Typography>
 
-      <Typography variant="h5" component="h5" sx={{ marginTop: "5%" }}>
-        Languages
-      </Typography>
-      <img src={cssLogo} alt={"css"} height="70vh" />
-      <img src={javascript} alt={"js"} height="70vh" />
-      <img src={html5} alt={"html"} height="70vh" />
-      <br></br>
-      <Typography variant="h5" component="h5" sx={{ marginTop: "5%" }}>
-        Frameworks
-      </Typography>
-      <img src={reactlogo} alt={"react"} height="70vh" />
-      <img src={nodejs} alt={"react"} height="70vh" />
-      <img src={firebase} alt={"firebase"} height="70vh" />
-      <img src={psql} alt={"firebase"} height="70vh" />
-      <br></br>
-      <Typography variant="h5" component="h5" sx={{ marginTop: "5%" }}>
-        Libraries
-      </Typography>
-      <img src={muilogo} alt={"mui"} height="70vh" />
-      <img src={reduxlogo} alt={"redux"} height="70vh" />
-      <img src={sequelize} alt={"firebase"} height="70vh" />
+      <Container sx={{ display: "flex", marginTop: "5%" }}>
+        <Container>
+          <Typography variant="h5" component="h5" sx={{ marginTop: "5%" }}>
+            Languages
+          </Typography>
+          <img src={cssLogo} alt={"css"} height="70vh" />
+          <img src={javascript} alt={"js"} height="70vh" />
+          <img src={html5} alt={"html"} height="70vh" />
+        </Container>
+        <Container>
+          <Typography variant="h5" component="h5" sx={{ marginTop: "5%" }}>
+            Frameworks
+          </Typography>
+          <img src={reactlogo} alt={"react"} height="70vh" />
+          <img src={nodejs} alt={"react"} height="70vh" />
+          <img src={firebase} alt={"firebase"} height="70vh" />
+          <img src={psql} alt={"firebase"} height="70vh" />
+        </Container>
+        <Container>
+          <Typography variant="h5" component="h5" sx={{ marginTop: "5%" }}>
+            Libraries
+          </Typography>
+          <img src={muilogo} alt={"mui"} height="70vh" />
+          <img src={reduxlogo} alt={"redux"} height="70vh" />
+          <img src={sequelize} alt={"firebase"} height="70vh" />
+        </Container>
+      </Container>
     </Container>
   );
 };

@@ -1,15 +1,12 @@
 import React from "react";
-import { Button, Container, Link } from "@mui/material";
+import { Container, Link } from "@mui/material";
 import RRR from "../static/images/RRR.png";
 import SITB from "../static/images/SITB.png";
 import "/Users/oliviafsa/ojarman_personalsite/src/App.css";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import styles from "./Home.styles";
-import ContactForm from "./ContactForm";
-import { useSelector } from "react-redux";
-const Projects = ({ theme }) => {
-  const showForm = useSelector((state) => state.contact.showForm);
+import github from "../static/images/github.png";
 
+const Projects = ({ theme }) => {
   return (
     <>
       <Container
@@ -19,7 +16,6 @@ const Projects = ({ theme }) => {
           marginRight: "2%",
           marginTop: "5vh",
           gap: "2vw",
-          color: `${theme.palette.primary.light}`,
         }}
       >
         <Container
@@ -36,6 +32,15 @@ const Projects = ({ theme }) => {
           <Link href="https://ocjarman.github.io/trivia_frontend/">
             {" "}
             <img src={SITB} alt={"logo"} className="sitb-color" />
+          </Link>
+          <Link href="https://github.com/ocjarman">
+            <img
+              src={github}
+              styles={styles.sx.GitHubIcon}
+              alt={"linkedin"}
+              // height="70vh"
+              className="sitb-color"
+            />
           </Link>
         </Container>
       </Container>

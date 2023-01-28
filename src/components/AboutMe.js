@@ -2,11 +2,7 @@ import * as React from "react";
 import PropTypes from "prop-types";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
-
-import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
-
-const emails = ["username@gmail.com", "user02@gmail.com"];
 
 function SimpleDialog(props) {
   const { onClose, selectedValue, open } = props;
@@ -15,13 +11,8 @@ function SimpleDialog(props) {
     onClose(selectedValue);
   };
 
-  const handleListItemClick = (value) => {
-    onClose(value);
-  };
-
   return (
     <Dialog onClose={handleClose} open={open}>
-      <DialogTitle>About Me</DialogTitle>
       <List sx={{ padding: "10%", width: "80%" }}>
         Hi! My name is Olivia, and I am an aspiring software engineer graduating
         from Fullstack Academy of Code in February of 2023.<br></br>
@@ -65,7 +56,6 @@ SimpleDialog.propTypes = {
 
 export default function AboutMe() {
   const [open, setOpen] = React.useState(false);
-  const [selectedValue, setSelectedValue] = React.useState(emails[1]);
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -73,7 +63,6 @@ export default function AboutMe() {
 
   const handleClose = (value) => {
     setOpen(false);
-    setSelectedValue(value);
   };
 
   return (
@@ -82,11 +71,7 @@ export default function AboutMe() {
       <Button variant="outlined" onClick={handleClickOpen}>
         About me
       </Button>
-      <SimpleDialog
-        selectedValue={selectedValue}
-        open={open}
-        onClose={handleClose}
-      />
+      <SimpleDialog open={open} onClose={handleClose} />
     </div>
   );
 }

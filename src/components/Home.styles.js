@@ -25,17 +25,10 @@ const styles = {
       alignSelf: "center",
     },
     GitHubIcon: {
-      height: "5vh",
+      height: "9vh",
       width: "auto",
       color: "#10134B",
     },
-    // ContactContainer: {
-    //   display: "flex",
-    //   justifyContent: "flex-start",
-    //   width: "85%",
-    //   gap: "2vw",
-    // },
-    AboutContainer: {},
   },
 };
 
