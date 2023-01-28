@@ -5,8 +5,11 @@ import SITB from "../static/images/SITB.png";
 import "/Users/oliviafsa/ojarman_personalsite/src/App.css";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import styles from "./Home.styles";
-
+import ContactForm from "./ContactForm";
+import { useSelector } from "react-redux";
 const Projects = ({ theme }) => {
+  const showForm = useSelector((state) => state.contact.showForm);
+
   return (
     <>
       <Container
@@ -14,7 +17,7 @@ const Projects = ({ theme }) => {
           display: "flex",
           justifyContent: "flex-end",
           marginRight: "2%",
-          marginTop: "10vh",
+          marginTop: "5vh",
           gap: "2vw",
           color: `${theme.palette.primary.light}`,
         }}

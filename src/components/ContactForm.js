@@ -55,7 +55,6 @@ const ContactForm = ({ theme }) => {
         alignContent: "center",
         justifyContent: "flex-start",
         alignItems: "center",
-        position: "absolute",
         bottom: 0,
         top: "8vh",
         width: "40%",
@@ -67,10 +66,12 @@ const ContactForm = ({ theme }) => {
         style={{
           display: "flex",
           flexDirection: "column",
+          borderRadius: "10%",
           backgroundColor: `${theme.palette.primary.light}`,
           color: "white",
-          width: "50%",
+          width: "100%",
           padding: "2%",
+          margin: "10%",
           gap: 10,
         }}
       >
@@ -82,7 +83,7 @@ const ContactForm = ({ theme }) => {
           }}
           variant={"h3"}
         >
-          Contact Me
+          Get in touch
         </Typography>
         <FormControl required>
           <InputLabel htmlFor="name-input">Your Name</InputLabel>

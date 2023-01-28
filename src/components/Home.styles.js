@@ -6,7 +6,7 @@ const styles = {
       backgroundSize: "cover",
       width: "100vw",
       backgroundPosition: "center",
-      height: "100vh",
+      height: "auto",
       overflowY: "hidden",
       maxWidth: "false",
     },
@@ -18,6 +18,7 @@ const styles = {
       justifyItems: "center",
       alignItems: "center",
       marginTop: "3vh",
+      textAlign: "center",
     },
     Logo: {
       placeSelf: "center",
@@ -28,24 +29,13 @@ const styles = {
       width: "auto",
       color: "#10134B",
     },
-    ContactContainer: {
-      display: "flex",
-      justifyContent: "flex-start",
-      width: "85%",
-      gap: "2vw",
-    },
-    AboutContainer: {
-      display: "flex",
-      flexDirection: "column",
-      alignContent: "center",
-      justifyContent: "flex-start",
-      alignItems: "center",
-      position: "absolute",
-      bottom: 0,
-      top: "8vh",
-      width: "40%",
-      height: "100%",
-    },
+    // ContactContainer: {
+    //   display: "flex",
+    //   justifyContent: "flex-start",
+    //   width: "85%",
+    //   gap: "2vw",
+    // },
+    AboutContainer: {},
   },
 };
 

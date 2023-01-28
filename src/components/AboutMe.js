@@ -1,25 +1,28 @@
-import React, { useState } from "react";
-import { send } from "emailjs-com";
-import styles from "./Home.styles";
-// import axios from "axios";
-import { Container, Typography } from "@mui/material";
-import ContactForm from "./ContactForm";
-const About = ({ theme }) => {
+import * as React from "react";
+import PropTypes from "prop-types";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+
+import DialogTitle from "@mui/material/DialogTitle";
+import Dialog from "@mui/material/Dialog";
+
+const emails = ["username@gmail.com", "user02@gmail.com"];
+
+function SimpleDialog(props) {
+  const { onClose, selectedValue, open } = props;
+
+  const handleClose = () => {
+    onClose(selectedValue);
+  };
+
+  const handleListItemClick = (value) => {
+    onClose(value);
+  };
+
   return (
-    <Container sx={{ padding: "2%", marginTop: "2%" }}>
-      <Typography
-        sx={{
-          borderRadius: "5%",
-          padding: "2%",
-          placeSelf: "center",
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          color: `${theme.palette.primary.main}`,
-          overflowX: "scroll",
-        }}
-        variant={"h5"}
-      >
+    <Dialog onClose={handleClose} open={open}>
+      <DialogTitle>About Me</DialogTitle>
+      <List sx={{ padding: "10%", width: "80%" }}>
         Hi! My name is Olivia, and I am an aspiring software engineer graduating
         from Fullstack Academy of Code in February of 2023.<br></br>
         <br></br>
@@ -49,9 +52,41 @@ const About = ({ theme }) => {
         a team with a lot of mentorship, learn a ton (and eventually teach
         newcomers!), and help build web applications that solve real world
         problems for people.
-      </Typography>
-    </Container>
+      </List>
+    </Dialog>
   );
+}
+
+SimpleDialog.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  open: PropTypes.bool.isRequired,
+  selectedValue: PropTypes.string.isRequired,
 };
 
-export default About;
+export default function AboutMe() {
+  const [open, setOpen] = React.useState(false);
+  const [selectedValue, setSelectedValue] = React.useState(emails[1]);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (value) => {
+    setOpen(false);
+    setSelectedValue(value);
+  };
+
+  return (
+    <div>
+      <br />
+      <Button variant="outlined" onClick={handleClickOpen}>
+        About me
+      </Button>
+      <SimpleDialog
+        selectedValue={selectedValue}
+        open={open}
+        onClose={handleClose}
+      />
+    </div>
+  );
+}

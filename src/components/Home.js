@@ -6,22 +6,15 @@ import styles from "./Home.styles";
 import Projects from "./Projects";
 import { useSelector } from "react-redux";
 import ContactForm from "./ContactForm";
-import MiniDrawer from "./MiniDrawer";
 import About from "./About";
-import List from "@mui/material/List";
-
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import EmailIcon from "@mui/icons-material/Email";
-import PersonIcon from "@mui/icons-material/Person";
-import { setShowForm, setShowAbout } from "../store/contactSlice";
 import { useDispatch } from "react-redux";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { Link } from "@mui/material";
-
+import { Link, Button } from "@mui/material";
+import instagramIcon from "../static/images/instagramIcon.png";
+import linkedIn from "../static/images/linkedIn.png";
+import TechnicalProficiencies from "./TechnicalProficiencies";
+import AboutMe from "./AboutMe";
+import { Typography } from "@mui/material";
 const theme = createTheme({
   palette: {
     primary: {
@@ -40,22 +33,13 @@ const theme = createTheme({
 });
 
 const Home = () => {
-  const showForm = useSelector((state) => state.contact.showForm);
-  const showAbout = useSelector((state) => state.contact.showAbout);
-
   const dispatch = useDispatch();
 
-  const toggleForm = () => {
-    dispatch(setShowForm());
-  };
-  const toggleAbout = () => {
-    dispatch(setShowAbout());
-  };
   return (
     <ThemeProvider theme={theme}>
       <Container sx={styles.sx.HomeContainer} maxWidth={false}>
-        <MiniDrawer theme={theme} />
         <Projects theme={theme} />
+
         <Container sx={styles.sx.LogoContainer}>
           <img
             src={initials}
@@ -64,91 +48,53 @@ const Home = () => {
             height="300vh"
             styles={styles.sx.Logo}
           />
-          <h2>OLIVIA JARMAN</h2>
-          <h5>SOFTWARE ENGINEER | FULLSTACK DEVELOPER</h5>
-          <List sx={{ display: "flex", border: "2px solid red" }}>
-            <ListItem
-              sx={{
-                display: "flex",
-              }}
-              onClick={toggleAbout}
-            >
-              <ListItemButton onClick={toggleAbout}>
-                <ListItemIcon
-                  onClick={toggleAbout}
-                  sx={{
-                    minWidth: 0,
-                    justifyContent: "center",
-                    color: "#10134B",
-                  }}
-                >
-                  <PersonIcon style={styles.sx.GitHubIcon} />
-                </ListItemIcon>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ display: "flex" }} onClick={toggleForm}>
-              <ListItemButton onClick={toggleForm}>
-                <ListItemIcon
-                  onClick={toggleForm}
-                  sx={{
-                    minWidth: 0,
-                    justifyContent: "center",
-                    gap: 3,
-                    color: "#10134B",
-                  }}
-                >
-                  <EmailIcon style={styles.sx.GitHubIcon} />
-                </ListItemIcon>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ display: "flex" }}>
-              <ListItemButton href="https://www.linkedin.com/in/oliviajarman/">
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    justifyContent: "center",
-                    gap: 3,
-                    color: "#10134B",
-                  }}
-                >
-                  <LinkedInIcon style={styles.sx.GitHubIcon} />
-                </ListItemIcon>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ display: "flex" }}>
-              <ListItemButton href="https://www.instagram.com/livcath/?hl=en">
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    justifyContent: "center",
-                    gap: 3,
-                    color: "#10134B",
-                  }}
-                >
-                  <InstagramIcon style={styles.sx.GitHubIcon} />
-                </ListItemIcon>
-              </ListItemButton>
-            </ListItem>
-            <ListItem sx={{ display: "flex" }}>
-              <ListItemButton href="https://www.instagram.com/livcath/?hl=en">
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    justifyContent: "center",
-                    gap: 3,
-                    color: "#10134B",
-                  }}
-                >
-                  <Link href="https://github.com/ocjarman">
-                    <GitHubIcon style={styles.sx.GitHubIcon} />
-                  </Link>
-                </ListItemIcon>
-              </ListItemButton>
-            </ListItem>
-          </List>
-          {showForm && <ContactForm theme={theme} />}
-          {showAbout && <About theme={theme} />}
+          <Typography variant="h2" component="h2">
+            OLIVIA JARMAN
+          </Typography>
+
+          <Typography
+            variant="h3"
+            component="h3"
+            sx={{
+              display: "flex",
+              margin: "5%",
+              justifyContent: "center",
+            }}
+          >
+            SOFTWARE ENGINEER | FULLSTACK DEVELOPER
+          </Typography>
+
+          <AboutMe />
+          <Container
+            sx={{
+              display: "flex",
+              margin: "10%",
+              justifyContent: "center",
+            }}
+          >
+            <Button href="https://www.linkedin.com/in/oliviajarman/">
+              <img
+                src={linkedIn}
+                styles={styles.sx.GitHubIcon}
+                alt={"linkedin"}
+                height="70vh"
+              />
+            </Button>
+            <Link href="https://github.com/ocjarman">
+              <GitHubIcon style={styles.sx.GitHubIcon} />
+            </Link>
+            <Link href="https://www.instagram.com/livcath/?hl=en">
+              <img
+                src={instagramIcon}
+                styles={styles.sx.GitHubIcon}
+                alt={"instagram"}
+                height="80vh"
+              />
+            </Link>
+          </Container>
+          <TechnicalProficiencies />
         </Container>
+        <ContactForm theme={theme} />
       </Container>
     </ThemeProvider>
   );
