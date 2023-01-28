@@ -1,19 +1,28 @@
 {
   "files": {
     "main.css": "/oliviajarman/static/css/main.fc41e2a5.css",
-    "main.js": "/oliviajarman/static/js/main.d76fc702.js",
+    "main.js": "/oliviajarman/static/js/main.520721d6.js",
     "static/js/787.0eea9db6.chunk.js": "/oliviajarman/static/js/787.0eea9db6.chunk.js",
+    "static/media/instagramIcon.png": "/oliviajarman/static/media/instagramIcon.7618c0fff7b3af6bac2a.png",
     "static/media/backgroundimage.png": "/oliviajarman/static/media/backgroundimage.1ab671f2651711adea54.png",
     "static/media/RRR.png": "/oliviajarman/static/media/RRR.6c5b8d5f1e626ecd8049.png",
+    "static/media/redux logo.png": "/oliviajarman/static/media/redux logo.1b4bb5fceb01b19da59d.png",
+    "static/media/psql.png": "/oliviajarman/static/media/psql.346709d92d82791ad17d.png",
     "static/media/initialsNavy.png": "/oliviajarman/static/media/initialsNavy.e86c4f2341ae7f4a40d2.png",
     "static/media/SITB.png": "/oliviajarman/static/media/SITB.586b082429b65ba2b1d9.png",
+    "static/media/reactIcon.png": "/oliviajarman/static/media/reactIcon.7aa3e7438534a7686f56.png",
+    "static/media/sequelize.png": "/oliviajarman/static/media/sequelize.18f5e339f8b55b55c222.png",
+    "static/media/firebase logo.png": "/oliviajarman/static/media/firebase logo.6ea3b0b39b97b0e49515.png",
+    "static/media/nodejs.webp": "/oliviajarman/static/media/nodejs.c52357c303ec3b476aa5.webp",
+    "static/media/html5.png": "/oliviajarman/static/media/html5.6a433bb63199207bb268.png",
+    "static/media/csslogo.png": "/oliviajarman/static/media/csslogo.5721a3928fe43de6baf8.png",
     "index.html": "/oliviajarman/index.html",
     "main.fc41e2a5.css.map": "/oliviajarman/static/css/main.fc41e2a5.css.map",
-    "main.d76fc702.js.map": "/oliviajarman/static/js/main.d76fc702.js.map",
+    "main.520721d6.js.map": "/oliviajarman/static/js/main.520721d6.js.map",
     "787.0eea9db6.chunk.js.map": "/oliviajarman/static/js/787.0eea9db6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fc41e2a5.css",
-    "static/js/main.d76fc702.js"
+    "static/js/main.520721d6.js"
   ]
 }
