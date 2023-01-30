@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/oliviajarman/static/css/main.fc41e2a5.css",
-    "main.js": "/oliviajarman/static/js/main.0e511785.js",
+    "main.css": "/oliviajarman/static/css/main.b5f0ac7b.css",
+    "main.js": "/oliviajarman/static/js/main.5f08c4c2.js",
     "static/js/787.0eea9db6.chunk.js": "/oliviajarman/static/js/787.0eea9db6.chunk.js",
     "static/media/instagramIcon.png": "/oliviajarman/static/media/instagramIcon.7618c0fff7b3af6bac2a.png",
     "static/media/backgroundimage.png": "/oliviajarman/static/media/backgroundimage.1ab671f2651711adea54.png",
@@ -18,12 +18,12 @@
     "static/media/html5.png": "/oliviajarman/static/media/html5.6a433bb63199207bb268.png",
     "static/media/csslogo.png": "/oliviajarman/static/media/csslogo.5721a3928fe43de6baf8.png",
     "index.html": "/oliviajarman/index.html",
-    "main.fc41e2a5.css.map": "/oliviajarman/static/css/main.fc41e2a5.css.map",
-    "main.0e511785.js.map": "/oliviajarman/static/js/main.0e511785.js.map",
+    "main.b5f0ac7b.css.map": "/oliviajarman/static/css/main.b5f0ac7b.css.map",
+    "main.5f08c4c2.js.map": "/oliviajarman/static/js/main.5f08c4c2.js.map",
     "787.0eea9db6.chunk.js.map": "/oliviajarman/static/js/787.0eea9db6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc41e2a5.css",
-    "static/js/main.0e511785.js"
+    "static/css/main.b5f0ac7b.css",
+    "static/js/main.5f08c4c2.js"
   ]
 }
