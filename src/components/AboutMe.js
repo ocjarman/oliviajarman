@@ -51,7 +51,6 @@ function SimpleDialog(props) {
 SimpleDialog.propTypes = {
   onClose: PropTypes.func.isRequired,
   open: PropTypes.bool.isRequired,
-  selectedValue: PropTypes.string.isRequired,
 };
 
 export default function AboutMe() {
@@ -68,7 +67,7 @@ export default function AboutMe() {
   return (
     <div>
       <br />
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <Button variant="contained" onClick={handleClickOpen}>
         About me
       </Button>
       <SimpleDialog open={open} onClose={handleClose} />

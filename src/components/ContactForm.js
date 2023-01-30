@@ -41,24 +41,11 @@ const ContactForm = ({ theme }) => {
 
   return (
     <Container
-      // sx={{
-      //   display: "flex",
-      //   flexDirection: "column",
-      //   alignContent: "center",
-      //   justifyContent: "center",
-      //   alignItems: "center",
-      //   marginTop: "5%",
-      // }}
       sx={{
         display: "flex",
         flexDirection: "column",
-        alignContent: "center",
-        justifyContent: "flex-start",
-        alignItems: "center",
         bottom: 0,
         top: "8vh",
-        width: "40%",
-        height: "100%",
       }}
     >
       <form
@@ -66,13 +53,12 @@ const ContactForm = ({ theme }) => {
         style={{
           display: "flex",
           flexDirection: "column",
-          borderRadius: "10%",
+          borderRadius: "5%",
           border: `1px solid ${theme.palette.primary.dark}`,
           color: "white",
-          width: "70%",
           padding: "2%",
-          margin: "10%",
-          gap: 10,
+          marginTop: "10%",
+          gap: 5,
         }}
       >
         <Typography
@@ -81,7 +67,7 @@ const ContactForm = ({ theme }) => {
             padding: "2%",
             placeSelf: "center",
           }}
-          variant={"h3"}
+          variant={"h4"}
         >
           Get in touch
         </Typography>
@@ -126,7 +112,7 @@ const ContactForm = ({ theme }) => {
             onChange={handleChange}
           />
           <FormHelperText id="phoneNum-helper-text">
-            Please enter phone number with area code.
+            Please include area code.
           </FormHelperText>
         </FormControl>
 

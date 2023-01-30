@@ -2,7 +2,6 @@ import backgroundImage from "../static/images/backgroundimage.png";
 const styles = {
   sx: {
     HomeContainer: {
-      // backgroundImage: `url(${backgroundImage})`,
       backgroundSize: "cover",
       width: "100vw",
       backgroundPosition: "center",

@@ -5,13 +5,16 @@ import initials from "../static/images/initialsNavy.png";
 import styles from "./Home.styles";
 import Projects from "./Projects";
 import ContactForm from "./ContactForm";
-import { useDispatch } from "react-redux";
 import { Link, Button } from "@mui/material";
 import instagramIcon from "../static/images/instagramIcon.png";
 import linkedIn from "../static/images/linkedIn.png";
-import TechnicalProficiencies from "./TechnicalProficiencies";
 import AboutMe from "./AboutMe";
 import { Typography } from "@mui/material";
+import TechnicalProficiencies from "./TechnicalProficiencies";
+import Divider from "@mui/material/Divider";
+
+import "./home.css";
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -37,6 +40,7 @@ const Home = () => {
 
         <Container sx={styles.sx.LogoContainer}>
           <img
+            className="logo"
             src={initials}
             alt={"logo"}
             width="300vh"
@@ -74,7 +78,7 @@ const Home = () => {
                 height="70vh"
               />
             </Button>
-
+            <Divider />
             <Link href="https://www.instagram.com/livcath/?hl=en">
               <img
                 src={instagramIcon}
@@ -85,8 +89,9 @@ const Home = () => {
             </Link>
           </Container>
           <AboutMe />
-          {/* <TechnicalProficiencies /> */}
         </Container>
+        <TechnicalProficiencies />
+
         <ContactForm theme={theme} />
       </Container>
     </ThemeProvider>

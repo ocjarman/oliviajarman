@@ -14,19 +14,33 @@
   .sitb-color {
     animation: sitb-color infinite 20s linear;
   }
+  .logo {
+    animation: logo infinite 20s ease-in;
+  }
 }
 
 @keyframes sitb-color {
   from {
-    background-color: #ff7961;
+    background-color: #c953de;
     border-radius: 100px;
     width: 9vh;
     height: "auto";
   }
   to {
-    background-color: #f44336;
+    background-color: #ec8780;
     border-radius: 100px;
     width: 9vh;
+  }
+}
+@keyframes logo {
+  from {
+    border-radius: 100px;
+    left: 0;
+    height: "auto";
+  }
+  to {
+    border-radius: 100px;
+    transform: rotateY(360deg);
   }
 }
 
