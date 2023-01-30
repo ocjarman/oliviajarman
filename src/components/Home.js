@@ -90,7 +90,7 @@ const Home = () => {
           </Container>
           <AboutMe />
         </Container>
-        <TechnicalProficiencies />
+        <TechnicalProficiencies theme={theme} />
 
         <ContactForm theme={theme} />
       </Container>
