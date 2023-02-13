@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/oliviajarman/static/css/main.f7e18a1b.css",
-    "main.js": "/oliviajarman/static/js/main.6a6eac70.js",
+    "main.css": "/oliviajarman/static/css/main.17d47b8a.css",
+    "main.js": "/oliviajarman/static/js/main.c7bdbbea.js",
     "static/js/787.0eea9db6.chunk.js": "/oliviajarman/static/js/787.0eea9db6.chunk.js",
     "static/media/instagramIcon.png": "/oliviajarman/static/media/instagramIcon.7618c0fff7b3af6bac2a.png",
-    "static/media/backgroundimage.png": "/oliviajarman/static/media/backgroundimage.1ab671f2651711adea54.png",
     "static/media/RRR.png": "/oliviajarman/static/media/RRR.6c5b8d5f1e626ecd8049.png",
     "static/media/redux logo.png": "/oliviajarman/static/media/redux logo.1b4bb5fceb01b19da59d.png",
     "static/media/psql.png": "/oliviajarman/static/media/psql.346709d92d82791ad17d.png",
@@ -19,12 +18,12 @@
     "static/media/initialsSVG.svg": "/oliviajarman/static/media/initialsSVG.59ba347ff0b6478bf3e8c531246f4813.svg",
     "static/media/codenames.svg": "/oliviajarman/static/media/codenames.cc1ee09e742dee0fcf6a0ca4c366433c.svg",
     "index.html": "/oliviajarman/index.html",
-    "main.f7e18a1b.css.map": "/oliviajarman/static/css/main.f7e18a1b.css.map",
-    "main.6a6eac70.js.map": "/oliviajarman/static/js/main.6a6eac70.js.map",
+    "main.17d47b8a.css.map": "/oliviajarman/static/css/main.17d47b8a.css.map",
+    "main.c7bdbbea.js.map": "/oliviajarman/static/js/main.c7bdbbea.js.map",
     "787.0eea9db6.chunk.js.map": "/oliviajarman/static/js/787.0eea9db6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f7e18a1b.css",
-    "static/js/main.6a6eac70.js"
+    "static/css/main.17d47b8a.css",
+    "static/js/main.c7bdbbea.js"
   ]
 }
