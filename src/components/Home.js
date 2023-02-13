@@ -12,6 +12,7 @@ import AboutMe from "./AboutMe";
 import { Typography } from "@mui/material";
 import TechnicalProficiencies from "./TechnicalProficiencies";
 import Divider from "@mui/material/Divider";
+import github from "../static/images/github.png";
 
 import "./home.css";
 
@@ -68,6 +69,10 @@ const Home = () => {
               display: "flex",
               marginTop: "5%",
               justifyContent: "center",
+              maxWidth: "500px",
+              display: "flex",
+              alignItems: "center",
+              gap: "1rem",
             }}
           >
             <Button href="https://www.linkedin.com/in/oliviajarman/">
@@ -84,7 +89,17 @@ const Home = () => {
                 src={instagramIcon}
                 styles={styles.sx.GitHubIcon}
                 alt={"instagram"}
+                height="78vh"
+              />
+            </Link>
+            <Divider />
+            <Link href="https://github.com/ocjarman">
+              <img
+                src={github}
+                styles={styles.sx.GitHubIcon}
+                alt={"linkedin"}
                 height="80vh"
+                // className="sitb-color"
               />
             </Link>
           </Container>

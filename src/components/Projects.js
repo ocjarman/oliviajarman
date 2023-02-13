@@ -4,7 +4,7 @@ import RRR from "../static/images/RRR.png";
 import SITB from "../static/images/SITB.png";
 import "/Users/oliviafsa/ojarman_personalsite/src/App.css";
 import styles from "./Home.styles";
-import github from "../static/images/github.png";
+import topBarLogo from "../static/images/codenames.svg";
 
 const Projects = ({ theme }) => {
   return (
@@ -33,14 +33,9 @@ const Projects = ({ theme }) => {
             {" "}
             <img src={SITB} alt={"logo"} className="sitb-color" />
           </Link>
-          <Link href="https://github.com/ocjarman">
-            <img
-              src={github}
-              styles={styles.sx.GitHubIcon}
-              alt={"linkedin"}
-              // height="70vh"
-              className="sitb-color"
-            />
+          <Link href="https://codenames-0nt7.onrender.com/">
+            {" "}
+            <img src={topBarLogo} alt={"logo"} className="sitb-color" />
           </Link>
         </Container>
       </Container>
