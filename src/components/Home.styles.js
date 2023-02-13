@@ -1,4 +1,3 @@
-import backgroundImage from "../static/images/backgroundimage.png";
 const styles = {
   sx: {
     HomeContainer: {
