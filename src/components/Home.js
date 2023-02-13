@@ -31,6 +31,9 @@ const theme = createTheme({
       contrastText: "#000",
     },
   },
+  typography: {
+    fontFamily: ["courier"].join(","),
+  },
 });
 
 const Home = () => {
