@@ -1,7 +1,7 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Container } from "@mui/material";
 import * as React from "react";
-import initials from "../static/images/initialsNavy.png";
+import initials from "../static/images/initialsSVG.svg";
 import styles from "./Home.styles";
 import Projects from "./Projects";
 import ContactForm from "./ContactForm";
@@ -31,6 +31,9 @@ const theme = createTheme({
       contrastText: "#000",
     },
   },
+  typography: {
+    fontFamily: ["courier"].join(","),
+  },
 });
 
 const Home = () => {
@@ -43,8 +46,8 @@ const Home = () => {
             className="logo"
             src={initials}
             alt={"logo"}
-            width="300vh"
-            height="300vh"
+            width="auto"
+            height="auto"
             styles={styles.sx.Logo}
           />
           <Typography variant="h3" component="h3">
