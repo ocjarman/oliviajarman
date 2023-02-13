@@ -7,6 +7,10 @@ const styles = {
       maxWidth: "false",
       display: "flex",
       flexDirection: "column",
+      alignContent: "center",
+      justifyContent: "center",
+      justifyItems: "center",
+      alignItems: "center",
     },
     LogoContainer: {
       display: "flex",
