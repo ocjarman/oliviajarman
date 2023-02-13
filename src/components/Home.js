@@ -39,9 +39,8 @@ const theme = createTheme({
 const Home = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Container sx={styles.sx.HomeContainer} maxWidth={false}>
+      <Container sx={styles.sx.HomeContainer}>
         <Projects theme={theme} />
-
         <Container sx={styles.sx.LogoContainer}>
           <img
             className="logo"
@@ -109,7 +108,6 @@ const Home = () => {
           <AboutMe />
         </Container>
         <TechnicalProficiencies theme={theme} />
-
         <ContactForm theme={theme} />
       </Container>
     </ThemeProvider>
