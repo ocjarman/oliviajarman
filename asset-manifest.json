@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/oliviajarman/static/css/main.b5f0ac7b.css",
-    "main.js": "/oliviajarman/static/js/main.8443df0b.js",
+    "main.css": "/oliviajarman/static/css/main.f7e18a1b.css",
+    "main.js": "/oliviajarman/static/js/main.6a6eac70.js",
     "static/js/787.0eea9db6.chunk.js": "/oliviajarman/static/js/787.0eea9db6.chunk.js",
     "static/media/instagramIcon.png": "/oliviajarman/static/media/instagramIcon.7618c0fff7b3af6bac2a.png",
     "static/media/backgroundimage.png": "/oliviajarman/static/media/backgroundimage.1ab671f2651711adea54.png",
     "static/media/RRR.png": "/oliviajarman/static/media/RRR.6c5b8d5f1e626ecd8049.png",
     "static/media/redux logo.png": "/oliviajarman/static/media/redux logo.1b4bb5fceb01b19da59d.png",
     "static/media/psql.png": "/oliviajarman/static/media/psql.346709d92d82791ad17d.png",
-    "static/media/initialsNavy.png": "/oliviajarman/static/media/initialsNavy.e86c4f2341ae7f4a40d2.png",
     "static/media/SITB.png": "/oliviajarman/static/media/SITB.586b082429b65ba2b1d9.png",
     "static/media/reactIcon.png": "/oliviajarman/static/media/reactIcon.7aa3e7438534a7686f56.png",
     "static/media/sequelize.png": "/oliviajarman/static/media/sequelize.18f5e339f8b55b55c222.png",
@@ -17,14 +16,15 @@
     "static/media/nodejs.webp": "/oliviajarman/static/media/nodejs.c52357c303ec3b476aa5.webp",
     "static/media/html5.png": "/oliviajarman/static/media/html5.6a433bb63199207bb268.png",
     "static/media/csslogo.png": "/oliviajarman/static/media/csslogo.5721a3928fe43de6baf8.png",
+    "static/media/initialsSVG.svg": "/oliviajarman/static/media/initialsSVG.59ba347ff0b6478bf3e8c531246f4813.svg",
     "static/media/codenames.svg": "/oliviajarman/static/media/codenames.cc1ee09e742dee0fcf6a0ca4c366433c.svg",
     "index.html": "/oliviajarman/index.html",
-    "main.b5f0ac7b.css.map": "/oliviajarman/static/css/main.b5f0ac7b.css.map",
-    "main.8443df0b.js.map": "/oliviajarman/static/js/main.8443df0b.js.map",
+    "main.f7e18a1b.css.map": "/oliviajarman/static/css/main.f7e18a1b.css.map",
+    "main.6a6eac70.js.map": "/oliviajarman/static/js/main.6a6eac70.js.map",
     "787.0eea9db6.chunk.js.map": "/oliviajarman/static/js/787.0eea9db6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5f0ac7b.css",
-    "static/js/main.8443df0b.js"
+    "static/css/main.f7e18a1b.css",
+    "static/js/main.6a6eac70.js"
   ]
 }
