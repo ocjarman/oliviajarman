@@ -46,6 +46,7 @@ const ContactForm = ({ theme }) => {
         flexDirection: "column",
         bottom: 0,
         top: "8vh",
+        alignItems: "center",
       }}
     >
       <form
@@ -53,11 +54,14 @@ const ContactForm = ({ theme }) => {
         style={{
           display: "flex",
           flexDirection: "column",
+          width: "20rem",
           borderRadius: "5%",
           border: `1px solid ${theme.palette.primary.dark}`,
           color: "white",
           padding: "2%",
-          marginTop: "10%",
+          marginTop: "5rem",
+          marginBottom: "5rem",
+
           gap: 5,
         }}
       >

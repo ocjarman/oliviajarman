@@ -9,11 +9,11 @@ import reactlogo from "../static/images/reactIcon.png";
 import psql from "../static/images/psql.png";
 import sequelize from "../static/images/sequelize.png";
 import nodejs from "../static/images/nodejs.webp";
+import typescript from "../static/images/typescript.png";
 import { Typography, Container } from "@mui/material";
 import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
+import { ThemeProvider, styled } from "@mui/material/styles";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -22,75 +22,94 @@ const Item = styled(Paper)(({ theme }) => ({
   height: "auto",
   lineHeight: "60px",
   marginTop: "40%",
+  width: "17.5rem",
 }));
-const lightTheme = createTheme({ palette: { mode: "light" } });
 
-const TechnicalProficiencies = () => {
+const TechnicalProficiencies = ({ theme }) => {
   return (
-    <Grid
-      container
-      spacing={2}
+    <Container
+      theme={theme}
+      item
+      xs={6}
       sx={{
         display: "flex",
         justifyContent: "center",
-        alignContent: "center",
         justifyItems: "center",
         alignItems: "center",
+        alignContent: "center",
       }}
     >
-      {[lightTheme].map((theme, index) => (
-        <Grid item xs={6} key={index}>
-          <ThemeProvider theme={theme}>
-            <Box
-              sx={{
-                bgcolor: "background.default",
-                display: "grid",
-                gridTemplateColumns: { md: "1fr 1fr 1fr" },
-                gap: 2,
-              }}
-            >
-              <Item elevation={2}>
-                <Typography
-                  variant="h5"
-                  component="h6"
-                  sx={{ marginTop: "3%" }}
-                >
-                  Languages
-                </Typography>
-                <img src={cssLogo} alt={"css"} height="70vh" />
-                <img src={javascript} alt={"js"} height="70vh" />
-                <img src={html5} alt={"html"} height="70vh" />
-              </Item>
-              <Item elevation={2}>
-                <Typography
-                  variant="h5"
-                  component="h6"
-                  sx={{ marginTop: "3%" }}
-                >
-                  Frameworks
-                </Typography>
-                <img src={reactlogo} alt={"react"} height="70vh" />
-                <img src={nodejs} alt={"react"} height="70vh" />
-                <img src={firebase} alt={"firebase"} height="70vh" />
-                <img src={psql} alt={"firebase"} height="70vh" />
-              </Item>
-              <Item elevation={2}>
-                <Typography
-                  variant="h5"
-                  component="h6"
-                  sx={{ marginTop: "3%" }}
-                >
-                  Libraries
-                </Typography>
-                <img src={muilogo} alt={"mui"} height="70vh" />
-                <img src={reduxlogo} alt={"redux"} height="70vh" />
-                <img src={sequelize} alt={"firebase"} height="70vh" />
-              </Item>
-            </Box>
-          </ThemeProvider>
-        </Grid>
-      ))}
-    </Grid>
+      <ThemeProvider theme={theme}>
+        <Box
+          sx={{
+            bgcolor: "background.default",
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+            // border: "5px solid red",
+          }}
+        >
+          <Item
+            elevation={2}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              height: "auto",
+              padding: "2rem",
+            }}
+          >
+            <Typography variant="h5" component="h6" sx={{ marginTop: "3%" }}>
+              Languages
+            </Typography>
+            <Container>
+              <img src={javascript} alt={"js"} height="90vh" />
+              <img src={typescript} alt={"js"} height="90vh" />
+              <img src={cssLogo} alt={"css"} height="90vh" />
+              <img src={html5} alt={"html"} height="90vh" />
+            </Container>
+          </Item>
+          <Item
+            elevation={2}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              height: "auto",
+              padding: "2rem",
+            }}
+          >
+            <Typography variant="h5" component="h6" sx={{ marginTop: "3%" }}>
+              Frameworks
+            </Typography>
+            <Container>
+              <img src={reactlogo} alt={"react"} height="90vh" />
+              <img src={nodejs} alt={"react"} height="90vh" />
+              <img src={firebase} alt={"firebase"} height="90vh" />
+              <img src={psql} alt={"firebase"} height="90vh" />
+            </Container>
+          </Item>
+          <Item
+            elevation={2}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              height: "auto",
+              padding: "2rem",
+            }}
+          >
+            <Typography variant="h5" component="h6" sx={{ marginTop: "3%" }}>
+              Libraries
+            </Typography>
+            <Container>
+              <img src={muilogo} alt={"mui"} height="90vh" />
+              <img src={reduxlogo} alt={"redux"} height="90vh" />
+              <img src={sequelize} alt={"firebase"} height="90vh" />
+            </Container>
+          </Item>
+        </Box>
+      </ThemeProvider>
+    </Container>
+    // ))}
+    // </Grid>
   );
 };
 
