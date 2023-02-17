@@ -114,7 +114,6 @@ const Home = () => {
     <ThemeProvider theme={theme}>
       <Container sx={styles.sx.HomeContainer}>
         <Particles options={options} init={particlesInit} />
-        <Projects theme={theme} />
         <Container sx={styles.sx.LogoContainer}>
           <Typography variant="h3" component="h3">
             OLIVIA JARMAN
@@ -151,6 +150,7 @@ const Home = () => {
             </Link>
           </Container>
           <AboutMe />
+          <Projects theme={theme} />
         </Container>
         <TechnicalProficiencies theme={theme} />
         <ContactForm theme={theme} />
