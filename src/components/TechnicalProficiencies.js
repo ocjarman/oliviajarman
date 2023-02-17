@@ -46,7 +46,11 @@ const TechnicalProficiencies = ({ theme }) => {
           }}
         >
           <img src={javascript} alt={"js"} height="90vh" />
-          <img src={typescript} alt={"js"} height="90vh" />
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
+            alt={"js"}
+            height="70vh"
+          />
           <img src={cssLogo} alt={"css"} height="90vh" />
           <img src={html5} alt={"html"} height="90vh" />
         </Container>

@@ -3,10 +3,9 @@ import { Container, Link } from "@mui/material";
 import RRR from "../static/images/RRR.png";
 import SITB from "../static/images/SITB.png";
 import "/Users/oliviafsa/ojarman_personalsite/src/App.css";
-import styles from "./Home.styles";
 import topBarLogo from "../static/images/codenames.svg";
 
-const Projects = ({ theme }) => {
+const Projects = () => {
   return (
     <>
       <Container
@@ -16,6 +15,7 @@ const Projects = ({ theme }) => {
           marginRight: "2%",
           marginTop: "5vh",
           gap: "2vw",
+          color: "white",
         }}
       >
         <Container
@@ -24,10 +24,17 @@ const Projects = ({ theme }) => {
             justifyContent: "flex-end",
             width: "85%",
             gap: "2vw",
+            color: "white",
           }}
         >
           <Link href="https://rightroundrecords.us">
-            <img src={RRR} alt={"logo"} width="auto" className="App-logo" />
+            <img
+              src={RRR}
+              alt={"logo"}
+              width="auto"
+              className="App-logo"
+              style={{ backgroundColor: "white", borderRadius: "50%" }}
+            />
           </Link>
           <Link href="https://ocjarman.github.io/trivia_frontend/">
             {" "}

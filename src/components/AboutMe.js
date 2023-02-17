@@ -67,7 +67,23 @@ export default function AboutMe() {
   return (
     <div>
       <br />
-      <Button variant="contained" onClick={handleClickOpen}>
+      <Button
+        variant="contained"
+        onClick={handleClickOpen}
+        sx={{
+          width: "auto",
+          height: "5vh",
+          placeSelf: "center",
+          marginTop: "2%",
+          color: "black",
+          backgroundColor: "white",
+          ":hover": {
+            backgroundColor: "black",
+            color: "white",
+            border: "1px solid white",
+          },
+        }}
+      >
         About me
       </Button>
       <SimpleDialog open={open} onClose={handleClose} />
