@@ -72,7 +72,6 @@ const Home = () => {
               marginTop: "5%",
               justifyContent: "center",
               maxWidth: "500px",
-              display: "flex",
               alignItems: "center",
               gap: "1rem",
             }}
@@ -101,7 +100,6 @@ const Home = () => {
                 styles={styles.sx.GitHubIcon}
                 alt={"linkedin"}
                 height="80vh"
-                // className="sitb-color"
               />
             </Link>
           </Container>
