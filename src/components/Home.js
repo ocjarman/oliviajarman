@@ -1,7 +1,6 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Container } from "@mui/material";
 import * as React from "react";
-import initials from "../static/images/initialsSVG.svg";
 import styles from "./Home.styles";
 import Projects from "./Projects";
 import ContactForm from "./ContactForm";
@@ -13,8 +12,9 @@ import { Typography } from "@mui/material";
 import TechnicalProficiencies from "./TechnicalProficiencies";
 import Divider from "@mui/material/Divider";
 import github from "../static/images/github.png";
-
-import "./home.css";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import { useCallback } from "react";
 
 const theme = createTheme({
   palette: {
@@ -33,53 +33,99 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: ["courier"].join(","),
+    color: "white",
   },
 });
 
 const Home = () => {
+  // particlets options on background
+  const options = {
+    background: {
+      color: "#000000",
+      opacity: 0.1,
+    },
+    interactivity: {
+      events: {
+        onClick: {
+          enable: true,
+          mode: "push",
+        },
+        onHover: {
+          enable: true,
+          mode: "repulse",
+        },
+        resize: true,
+      },
+      modes: {
+        bubble: {
+          distance: 400,
+          duration: 2,
+          opacity: 0.5,
+          size: 40,
+        },
+        push: {
+          quantity: 4,
+        },
+        repulse: {
+          distance: 200,
+          duration: 0.4,
+        },
+      },
+    },
+    particles: {
+      color: {
+        value: "#ffffff",
+      },
+      collisions: {
+        enable: true,
+      },
+      move: {
+        direction: "none",
+        enable: true,
+        outMode: "bounce",
+        random: true,
+        speed: 6,
+        straight: false,
+      },
+      number: {
+        density: {
+          enable: true,
+          value_area: 1000,
+        },
+        value: 10,
+      },
+      opacity: {
+        value: 0.5,
+      },
+      shape: {
+        type: "circle",
+      },
+      size: {
+        random: true,
+        value: 5,
+      },
+    },
+  };
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Container sx={styles.sx.HomeContainer}>
-        <Projects theme={theme} />
+        <Particles options={options} init={particlesInit} />
         <Container sx={styles.sx.LogoContainer}>
-          <img
-            className="logo"
-            src={initials}
-            alt={"logo"}
-            width="auto"
-            height="auto"
-            styles={styles.sx.Logo}
-          />
           <Typography variant="h3" component="h3">
             OLIVIA JARMAN
           </Typography>
-
-          <Typography
-            variant="h5"
-            component="h5"
-            sx={{
-              display: "flex",
-              marginTop: "5%",
-              justifyContent: "center",
-            }}
-          >
+          <Typography variant="h5" component="h5">
             SOFTWARE ENGINEER | FULLSTACK DEVELOPER
           </Typography>
-
-          <Container
-            sx={{
-              display: "flex",
-              marginTop: "5%",
-              justifyContent: "center",
-              maxWidth: "500px",
-              alignItems: "center",
-              gap: "1rem",
-            }}
-          >
+          <Container sx={styles.sx.IconContainer}>
             <Button href="https://www.linkedin.com/in/oliviajarman/">
               <img
                 src={linkedIn}
-                styles={styles.sx.GitHubIcon}
+                styles={styles.sx.Icon}
                 alt={"linkedin"}
                 height="70vh"
               />
@@ -88,7 +134,7 @@ const Home = () => {
             <Link href="https://www.instagram.com/livcath/?hl=en">
               <img
                 src={instagramIcon}
-                styles={styles.sx.GitHubIcon}
+                styles={styles.sx.Icon}
                 alt={"instagram"}
                 height="78vh"
               />
@@ -97,13 +143,14 @@ const Home = () => {
             <Link href="https://github.com/ocjarman">
               <img
                 src={github}
-                styles={styles.sx.GitHubIcon}
+                styles={styles.sx.Icon}
                 alt={"linkedin"}
                 height="80vh"
               />
             </Link>
           </Container>
           <AboutMe />
+          <Projects theme={theme} />
         </Container>
         <TechnicalProficiencies theme={theme} />
         <ContactForm theme={theme} />

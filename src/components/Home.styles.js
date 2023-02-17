@@ -1,34 +1,35 @@
 const styles = {
   sx: {
     HomeContainer: {
+      backgroundColor: "black",
+      color: "white",
       height: "auto",
       overflowY: "hidden",
-      maxWidth: "false",
       display: "flex",
       flexDirection: "column",
       alignContent: "center",
       justifyContent: "center",
-      justifyItems: "center",
-      alignItems: "center",
     },
     LogoContainer: {
+      marginTop: "10vh",
+      marginBottom: "10vh",
       display: "flex",
       flexDirection: "column",
-      alignContent: "center",
-      justifyContent: "center",
-      justifyItems: "center",
       alignItems: "center",
-      marginTop: "3vh",
+      justifyContent: "center",
       textAlign: "center",
     },
-    Logo: {
-      placeSelf: "center",
-      alignSelf: "center",
+    IconContainer: {
+      display: "flex",
+      marginTop: "2vh",
+      justifyContent: "center",
+      maxWidth: "500px",
+      alignItems: "center",
+      gap: "1rem",
     },
-    GitHubIcon: {
+    Icon: {
       height: "9vh",
       width: "auto",
-      color: "#10134B",
     },
   },
 };
