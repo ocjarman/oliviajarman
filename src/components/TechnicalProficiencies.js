@@ -9,42 +9,16 @@ import reactlogo from "../static/images/reactIcon.png";
 import psql from "../static/images/psql.png";
 import sequelize from "../static/images/sequelize.png";
 import nodejs from "../static/images/nodejs.webp";
-import typescript from "../static/images/typescript.png";
 import { Typography, Container } from "@mui/material";
-
+import styles from "./Technical.styles";
 const TechnicalProficiencies = ({ theme }) => {
   return (
-    <Container
-      sx={{
-        display: "flex",
-        // flexDirection: "column",
-
-        marginTop: "2rem",
-        width: "auto",
-      }}
-    >
-      <Container
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          margin: "2rem",
-          border: "1px solid gainsboro",
-        }}
-      >
+    <Container sx={styles.sx.OuterContainer}>
+      <Container sx={styles.sx.InnerContainer}>
         <Typography variant="h5" component="h6" sx={{ marginTop: "3%" }}>
           Languages
         </Typography>
-        <Container
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignContent: "center",
-            justifyItems: "center",
-            alignItems: "center",
-          }}
-        >
+        <Container sx={styles.sx.IconContainer}>
           <img src={javascript} alt={"js"} height="90vh" />
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
@@ -55,58 +29,24 @@ const TechnicalProficiencies = ({ theme }) => {
           <img src={html5} alt={"html"} height="90vh" />
         </Container>
       </Container>
-      <Container
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          border: "1px solid gainsboro",
-          margin: "2rem",
-        }}
-      >
+      <Container sx={styles.sx.InnerContainer}>
         {" "}
         <Typography variant="h5" component="h6" sx={{ marginTop: "3%" }}>
           Frameworks
         </Typography>
-        <Container
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignContent: "center",
-            justifyItems: "center",
-            alignItems: "center",
-          }}
-        >
+        <Container sx={styles.sx.IconContainer}>
           <img src={reactlogo} alt={"react"} height="90vh" />
           <img src={nodejs} alt={"react"} height="90vh" />
           <img src={firebase} alt={"firebase"} height="90vh" />
           <img src={psql} alt={"firebase"} height="90vh" />
         </Container>
       </Container>
-      <Container
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          margin: "2rem",
-          border: "1px solid gainsboro",
-        }}
-      >
+      <Container sx={styles.sx.InnerContainer}>
         {" "}
         <Typography variant="h5" component="h6" sx={{ marginTop: "3%" }}>
           Libraries
         </Typography>
-        <Container
-          sx={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            alignContent: "center",
-            justifyItems: "center",
-            alignItems: "center",
-          }}
-        >
+        <Container sx={styles.sx.IconContainer}>
           <img src={muilogo} alt={"mui"} height="90vh" />
           <img src={reduxlogo} alt={"redux"} height="90vh" />
           <img src={sequelize} alt={"firebase"} height="90vh" />

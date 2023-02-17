@@ -2,8 +2,8 @@ const styles = {
   sx: {
     OuterContainer: {
       display: "flex",
-      marginTop: "10vh",
-      marginBottom: "10vh",
+      marginTop: "8vh",
+      // marginBottom: "vh",
       justifyContent: "center",
       justifyItems: "center",
       alignItems: "center",
@@ -12,7 +12,6 @@ const styles = {
       color: "white",
       flexDirection: "column",
     },
-
     ProjectIcons: {
       display: "flex",
       gap: "2vw",
