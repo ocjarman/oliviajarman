@@ -6,6 +6,8 @@ const styles = {
     OuterContainer: {
       display: "flex",
       width: "auto",
+      flexWrap: "wrap",
+      justifyContent: "center",
     },
     InnerContainer: {
       display: "flex",
@@ -13,6 +15,8 @@ const styles = {
       alignItems: "center",
       margin: "2rem",
       border: "1px solid gainsboro",
+      width: "auto",
+      padding: "1rem",
     },
     IconContainer: {
       display: "flex",

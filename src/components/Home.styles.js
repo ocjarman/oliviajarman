@@ -16,6 +16,8 @@ const styles = {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      justifyContent: "center",
+      textAlign: "center",
     },
     IconContainer: {
       display: "flex",

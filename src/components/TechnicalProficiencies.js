@@ -19,14 +19,14 @@ const TechnicalProficiencies = ({ theme }) => {
           Languages
         </Typography>
         <Container sx={styles.sx.IconContainer}>
-          <img src={javascript} alt={"js"} height="90vh" />
+          <img src={javascript} alt={"js"} height="50vh" />
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"
             alt={"js"}
-            height="70vh"
+            height="40vh"
           />
-          <img src={cssLogo} alt={"css"} height="90vh" />
-          <img src={html5} alt={"html"} height="90vh" />
+          <img src={cssLogo} alt={"css"} height="50vh" />
+          <img src={html5} alt={"html"} height="50vh" />
         </Container>
       </Container>
       <Container sx={styles.sx.InnerContainer}>
@@ -35,10 +35,10 @@ const TechnicalProficiencies = ({ theme }) => {
           Frameworks
         </Typography>
         <Container sx={styles.sx.IconContainer}>
-          <img src={reactlogo} alt={"react"} height="90vh" />
-          <img src={nodejs} alt={"react"} height="90vh" />
-          <img src={firebase} alt={"firebase"} height="90vh" />
-          <img src={psql} alt={"firebase"} height="90vh" />
+          <img src={reactlogo} alt={"react"} height="50vh" />
+          <img src={nodejs} alt={"react"} height="50vh" />
+          <img src={firebase} alt={"firebase"} height="50vh" />
+          <img src={psql} alt={"firebase"} height="50vh" />
         </Container>
       </Container>
       <Container sx={styles.sx.InnerContainer}>
@@ -47,9 +47,9 @@ const TechnicalProficiencies = ({ theme }) => {
           Libraries
         </Typography>
         <Container sx={styles.sx.IconContainer}>
-          <img src={muilogo} alt={"mui"} height="90vh" />
-          <img src={reduxlogo} alt={"redux"} height="90vh" />
-          <img src={sequelize} alt={"firebase"} height="90vh" />
+          <img src={muilogo} alt={"mui"} height="50vh" />
+          <img src={reduxlogo} alt={"redux"} height="50vh" />
+          <img src={sequelize} alt={"firebase"} height="50vh" />
         </Container>
       </Container>
     </Container>

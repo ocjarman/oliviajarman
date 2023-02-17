@@ -20,7 +20,7 @@ const Projects = () => {
             alt={"logo"}
             width="auto"
             className="App-logo"
-            style={{ backgroundColor: "white", borderRadius: "50%" }}
+            style={{ backgroundColor: "#dcd7dd", borderRadius: "50%" }}
           />
         </Link>
         <Link href="https://ocjarman.github.io/trivia_frontend/">
