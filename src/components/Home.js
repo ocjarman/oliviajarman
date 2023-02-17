@@ -1,7 +1,6 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { Container } from "@mui/material";
 import * as React from "react";
-import initials from "../static/images/initialsSVG2.svg";
 import styles from "./Home.styles";
 import Projects from "./Projects";
 import ContactForm from "./ContactForm";
@@ -117,44 +116,17 @@ const Home = () => {
         <Particles options={options} init={particlesInit} />
         <Projects theme={theme} />
         <Container sx={styles.sx.LogoContainer}>
-          {/* <img
-            className="logo"
-            src={initials}
-            alt={"logo"}
-            width="auto"
-            height="auto"
-            styles={styles.sx.Logo}
-          /> */}
           <Typography variant="h3" component="h3">
             OLIVIA JARMAN
           </Typography>
-
-          <Typography
-            variant="h5"
-            component="h5"
-            sx={{
-              display: "flex",
-              marginTop: "5%",
-              justifyContent: "center",
-            }}
-          >
+          <Typography variant="h5" component="h5">
             SOFTWARE ENGINEER | FULLSTACK DEVELOPER
           </Typography>
-
-          <Container
-            sx={{
-              display: "flex",
-              marginTop: "5%",
-              justifyContent: "center",
-              maxWidth: "500px",
-              alignItems: "center",
-              gap: "1rem",
-            }}
-          >
+          <Container sx={styles.sx.IconContainer}>
             <Button href="https://www.linkedin.com/in/oliviajarman/">
               <img
                 src={linkedIn}
-                styles={styles.sx.GitHubIcon}
+                styles={styles.sx.Icon}
                 alt={"linkedin"}
                 height="70vh"
               />
@@ -163,7 +135,7 @@ const Home = () => {
             <Link href="https://www.instagram.com/livcath/?hl=en">
               <img
                 src={instagramIcon}
-                styles={styles.sx.GitHubIcon}
+                styles={styles.sx.Icon}
                 alt={"instagram"}
                 height="78vh"
               />
@@ -172,7 +144,7 @@ const Home = () => {
             <Link href="https://github.com/ocjarman">
               <img
                 src={github}
-                styles={styles.sx.GitHubIcon}
+                styles={styles.sx.Icon}
                 alt={"linkedin"}
                 height="80vh"
               />
