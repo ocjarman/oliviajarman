@@ -35,6 +35,13 @@ const theme = createTheme({
     fontFamily: ["courier"].join(","),
     color: "white",
   },
+  overrides: {
+    MuiInputLabel: {
+      root: {
+        color: "rgba(255, 255, 255, 0.87)",
+      },
+    },
+  },
 });
 
 const Home = () => {

@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-import { send } from "emailjs-com";
-import styles from "./Home.styles";
-// import axios from "axios";
+import React from "react";
 import { Container, Typography } from "@mui/material";
-import ContactForm from "./ContactForm";
+
 const About = ({ theme }) => {
   return (
     <Container sx={{ padding: "2%", marginTop: "2%" }}>
