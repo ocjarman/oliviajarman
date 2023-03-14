@@ -38,7 +38,7 @@ function SimpleDialog(props) {
         others.
         <br></br>
         <br></br>
-        I’m looking forward to beginning a fullstack role where I can be on a
+        I’m looking forward to beginning a fullstack role where I can work on a
         collaborative team with mentorship, code review processes, and am able
         to contribute to meaningful projects with code.
       </List>
