@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 
-const ContactForm = ({ theme }) => {
+const ContactForm = () => {
   //   const dispatch = useDispatch();
   //   const navigate = useNavigate();
 
@@ -20,12 +20,25 @@ const ContactForm = ({ theme }) => {
     from_name: "",
     to_name: "",
     message: "",
+    company: "",
+    phoneNum: "",
     reply_to: "",
   });
 
   //
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
+
+  const resetFormState = () => {
+    setToSend({
+      from_name: "",
+      to_name: "",
+      company: "",
+      message: "",
+      phoneNum: "",
+      reply_to: "",
+    });
   };
 
   const handleSubmit = (e) => {
@@ -37,6 +50,7 @@ const ContactForm = ({ theme }) => {
       .catch((err) => {
         console.log("FAILED...", err);
       });
+    resetFormState();
   };
 
   return (
@@ -61,7 +75,6 @@ const ContactForm = ({ theme }) => {
           padding: "2%",
           marginTop: "5rem",
           marginBottom: "5rem",
-
           gap: 5,
         }}
       >
@@ -77,7 +90,7 @@ const ContactForm = ({ theme }) => {
         </Typography>
         <FormControl required sx={{ color: "white" }}>
           <InputLabel sx={{ color: "white" }} htmlFor="name-input">
-            Your Name
+            Name
           </InputLabel>
           <Input
             type="text"
@@ -90,15 +103,11 @@ const ContactForm = ({ theme }) => {
               width: "30vh",
             }}
           />
-          <FormHelperText
-            sx={{ color: "white" }}
-            id="name-helper-text"
-          ></FormHelperText>
         </FormControl>
 
         <FormControl required sx={{ color: "white" }}>
           <InputLabel sx={{ color: "white" }} htmlFor="email-input">
-            Your Email
+            E-mail
           </InputLabel>
           <Input
             type="text"
@@ -111,10 +120,6 @@ const ContactForm = ({ theme }) => {
               width: "30vh",
             }}
           />
-          <FormHelperText
-            sx={{ color: "white" }}
-            id="email-helper-text"
-          ></FormHelperText>
         </FormControl>
         <FormControl sx={{ color: "white" }}>
           <InputLabel sx={{ color: "white" }} htmlFor="name-input">
@@ -123,6 +128,8 @@ const ContactForm = ({ theme }) => {
           <Input
             name="company"
             id="company"
+            type="text"
+            value={toSend.company}
             aria-describedby="company-helper-text"
             onChange={handleChange}
             sx={{
@@ -131,16 +138,17 @@ const ContactForm = ({ theme }) => {
               width: "30vh",
             }}
           />
-          <FormHelperText id="name-helper-text"></FormHelperText>
         </FormControl>
 
         <FormControl sx={{ color: "white" }}>
           <InputLabel sx={{ color: "white" }} htmlFor="phoneNum-input">
-            Your Phone Number
+            Phone Number
           </InputLabel>
           <Input
             name="phoneNum"
             id="phoneNum-input"
+            type="text"
+            value={toSend.phoneNum}
             aria-describedby="phoneNum-helper-text"
             onChange={handleChange}
             sx={{
@@ -156,7 +164,7 @@ const ContactForm = ({ theme }) => {
 
         <FormControl required sx={{ color: "white" }}>
           <InputLabel sx={{ color: "white" }} htmlFor="message-input">
-            Your message
+            Message
           </InputLabel>
           <Input
             type="text"
@@ -169,10 +177,6 @@ const ContactForm = ({ theme }) => {
               width: "30vh",
             }}
           />
-          <FormHelperText
-            sx={{ color: "white" }}
-            id="message-helper-text"
-          ></FormHelperText>
         </FormControl>
         <Button
           size="large"

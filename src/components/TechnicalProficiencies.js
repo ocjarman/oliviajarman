@@ -11,7 +11,7 @@ import sequelize from "../static/images/sequelize.png";
 import nodejs from "../static/images/nodejs.webp";
 import { Typography, Container } from "@mui/material";
 import styles from "./Technical.styles";
-const TechnicalProficiencies = ({ theme }) => {
+const TechnicalProficiencies = () => {
   return (
     <Container sx={styles.sx.OuterContainer}>
       <Container sx={styles.sx.InnerContainer}>
