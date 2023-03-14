@@ -14,33 +14,33 @@ function SimpleDialog(props) {
   return (
     <Dialog onClose={handleClose} open={open}>
       <List sx={{ padding: "10%", width: "80%" }}>
-        Hi! My name is Olivia, and I am a software engineer graduating from
-        Fullstack Academy of Code in February of 2023.<br></br>
+        Hi! My name is Olivia, and I am a Fullstack Software Engineer.<br></br>
         <br></br>
-        Prior to my shift into software engineering, I was a science teacher and
-        program manager at a college access program with about 7 years of
+        Prior to my shift into web development, I was a science teacher and
+        program manager at a college access program, with about 7 years of
         professional experience. My work focused on preparing and coaching high
-        school students in the college application processes, in addition to
-        project and event management. <br></br>
+        school students in the college application process, in addition to
+        project and event management for the organizations I worked for.{" "}
+        <br></br>
         <br></br>I found myself drawn to software engineering during my
         maternity leave from graduate school. I started learning to code during
         my son’s nap time, and fell in love with the feeling I got from building
         sites and working through problems. I realized that I enjoyed coding
         more than I did writing psychological reports, so I decided to go to
         bootcamp. Instead of solving education based problems, I am now able to
-        solve real world problems with code. <br></br>
+        solve problems with code. <br></br>
         <br></br>
         My strengths include learning new technologies quickly, staying
         organized, and communicating with teammates about project goals,
-        visions, and next steps. I've completed individual and group project at
+        visions, and next steps. I've completed individual and group projects at
         Fullstack Academy of Code, with various new technologies and languages I
-        have learned like TypeScript, JavaScript, React, and Redux.
+        have learned like TypeScript, JavaScript, React, and Firebase, and many
+        others.
         <br></br>
         <br></br>
-        I’m looking forward to exploring fullstack roles where I can be part of
-        a team with a lot of mentorship, learn a ton (and eventually teach
-        newcomers!), and help build web applications that solve real world
-        problems for people.
+        I’m looking forward to beginning a fullstack role where I can be on a
+        collaborative team with mentorship, code review processes, and am able
+        to contribute to meaningful projects with code.
       </List>
     </Dialog>
   );
