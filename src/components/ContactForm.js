@@ -13,9 +13,6 @@ import {
 } from "@mui/material";
 
 const ContactForm = () => {
-  //   const dispatch = useDispatch();
-  //   const navigate = useNavigate();
-
   const [toSend, setToSend] = useState({
     from_name: "",
     to_name: "",

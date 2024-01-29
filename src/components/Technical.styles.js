@@ -1,6 +1,3 @@
-// marginTop: "10vh",
-// marginBottom: "10vh",
-
 const styles = {
   sx: {
     OuterContainer: {
