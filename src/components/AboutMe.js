@@ -14,33 +14,30 @@ function SimpleDialog(props) {
   return (
     <Dialog onClose={handleClose} open={open}>
       <List sx={{ padding: "10%", width: "80%" }}>
-        Hi! My name is Olivia, and I am a Fullstack Software Engineer.<br></br>
+        Hi! My name is Olivia, and I am a fullstack software engineer.<br></br>
         <br></br>
-        Prior to my shift into web development, I was a science teacher and
-        program manager at a college access program, with about 7 years of
-        professional experience. My work focused on preparing and coaching high
-        school students in the college application process, in addition to
-        project and event management for the organizations I worked for.{" "}
+        Prior to my shift into software engineering, I was a science teacher and
+        program manager at a college access program with about 7 years of
+        experience. My work focused on preparing high school students in the
+        college application processes. I also completed 25 credit hours towards
+        becoming a school psychologist at Brooklyn College from 2020-2021.{" "}
         <br></br>
         <br></br>I found myself drawn to software engineering during my
         maternity leave from graduate school. I started learning to code during
-        my son’s nap time, and fell in love with the feeling I got from building
-        sites and working through problems. I realized that I enjoyed coding
-        more than I did writing psychological reports, so I decided to go to
-        bootcamp. Instead of solving education based problems, I am now able to
-        solve problems with code. <br></br>
+        my son’s nap time, and fell in love with building and working through
+        problems with code. I realized that I enjoyed coding more than I did
+        writing psychological reports, so I decided to go to bootcamp. <br></br>
         <br></br>
         My strengths include learning new technologies quickly, staying
         organized, and communicating with teammates about project goals,
-        visions, and next steps. I've completed individual and group projects at
-        Fullstack Academy of Code, with various new technologies and languages I
-        have learned like TypeScript, JavaScript, React, and Firebase, and many
-        others.
+        visions, and next steps. Most of my experience is working with React,
+        JavaScript, TypeScript, AGGrid, and PostgreSQL, but I have worked with
+        countless other technologies during my time as an engineer so far.
         <br></br>
         <br></br>
-        I’m looking forward to beginning a fullstack role where I can work on a
-        collaborative team with mentorship, code review processes, and am able
-        to contribute to meaningful projects with code.
+        I’m interested in exploring frontend leaning / fullstack roles where I
+        can be part of a team with mentorship, feedback, and the opportunity to
+        learn and grow as a developer.
       </List>
     </Dialog>
   );
